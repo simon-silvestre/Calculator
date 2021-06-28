@@ -2,12 +2,12 @@
   <div id="app">
     <div class="calculator">
       <div class="resultContainer">
-        <p class="result">{{ result }}</p>
+        <p class="result">{{ result || 0 }}</p>
       </div>
       <div class="keyboard">
-        <bouton number="7"/>
-        <bouton number="8"/>
-        <bouton number="9"/>
+        <bouton number="7" @click="action(7)"/>
+        <bouton number="8" @click="action(7)"/>
+        <bouton number="9" @click="action(7)"/>
         <bouton number="DEL" class="del"/>
         <bouton number="4"/>
         <bouton number="5"/>
@@ -20,7 +20,7 @@
         <bouton number="."/>
         <bouton number="0"/>
         <bouton number="/"/>
-        <bouton number="x"/>
+        <bouton number="*"/>
         <bouton number="RESET" class="reset bigButton"/>
         <bouton number="=" class="equal bigButton"/>
       </div>
@@ -38,9 +38,11 @@ export default {
   },
   data() {
     return {
-      result: 399.981
+      result: '',
+      operateur: '',
+      previousResultValue: ''
     }
-  },
+  }
 }
 </script>
 

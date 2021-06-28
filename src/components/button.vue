@@ -1,6 +1,6 @@
 <template>
   <div class="button">
-    <div class="numberContainer">
+    <div class="numberContainer" @click="action(number)">
       <p>{{ number }}</p>
     </div>
     <span class="ombre"></span>
@@ -12,6 +12,40 @@ export default {
   name: 'HelloWorld',
   props: {
     number: String
+  },
+  methods: {
+    action(value) {
+      /* inscricre les valeurs */
+        if(!isNaN(value) || value === '.' && !this.$parent.result.includes('.')) {
+        this.$parent.result += value + ''
+      }
+      
+      /* reinitialiser  */
+      if(value === 'RESET') {
+        this.$parent.result = ''
+      }
+
+      /* effacer */
+      if(value === 'DEL') {
+        this.$parent.result = this.$parent.result.substring(0, this.$parent.result.length-1)
+      }
+
+      /* addition */ 
+      if(value === '+' || value === '-' || value === '/' || value === '*') {
+        this.$parent.operateur = value 
+        this.$parent.previousResultValue = this.$parent.result
+        this.$parent.result = ''
+      }
+
+      /* resultat */
+      if(value === '=') {
+        
+        this.$parent.result = eval(this.$parent.previousResultValue + this.$parent.operateur + this.$parent.result)
+
+        this.$parent.previousResultValue = ''
+        this.$parent.operateur = ''
+      }
+    }
   }
 }
 </script>
