@@ -88,4 +88,26 @@ export default {
     bottom: 0;
   }
 }
+
+ @media screen and (max-width: 530px) {
+   .button {
+      width: 50px;
+      height: 45px;
+
+      .numberContainer {
+        height: 45px;
+
+        &:active {
+          height: 50px;
+        }
+
+        p {
+          font-size: 30px;
+        }
+      }
+      .ombre {
+        bottom: -5px;
+      }
+   }
+ }
 </style>

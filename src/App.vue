@@ -125,4 +125,25 @@ export default {
 
     }
   }
+
+  @media screen and (max-width: 530px) {
+    .calculator {
+      width: 300px;
+      height: 450px;
+      position: relative;
+
+      .resultContainer .result {
+        font-size: 30px;
+      }
+
+      .keyboard .del, .keyboard .bigButton {
+        p {
+          font-size: 12px;
+        }
+      }
+      .keyboard .bigButton {
+        width: 115px;
+      }
+    }
+  }
 </style>
