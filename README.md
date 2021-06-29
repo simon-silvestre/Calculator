@@ -1,24 +1,24 @@
-# calculator
+<h1 align="center">Welcome to Calculator 👋</h1>
 
-## Project setup
-```
+> Petit projet de calculatrice avec VueJS
+
+### ✨ [Essayez par vous-même](http://calculator.simon-projets.com)
+
+## Install
+
+```sh
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Author
 
-### Compiles and minifies for production
-```
-npm run build
-```
+👤 **Simon Silvestre**
 
-### Lints and fixes files
-```
-npm run lint
-```
+* Website: [Simon-projets.com](https://simon-projets.com)
+* Github: [@simon-silvestre](https://github.com/simon-silvestre)
+* LinkedIn: [@simon-silvestre](https://linkedin.com/in/simon-silvestre)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Show your support
+
+Give a ⭐️ if like this project!
+
